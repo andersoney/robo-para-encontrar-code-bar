@@ -129,3 +129,5 @@ dmypy.json
 .pyre/
 
 object-detection-*
+
+yoloDados/yolov3.weights
