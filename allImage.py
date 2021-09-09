@@ -17,7 +17,8 @@ images = [
     'images\dump2.jpg', 
     'images\dump3.jpg', 
     'images\dump4.jfif', 
-    'images\dump5.jpg'
+    'images\dump5.jpg',
+    'images\dump6.jpg'
 ]
 findObjectInImage = dozero.FindObjectInImage(args)
 for image in images:
