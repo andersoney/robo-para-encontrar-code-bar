@@ -130,4 +130,4 @@ dmypy.json
 
 object-detection-*
 
-yoloDados/yolov3.weights
+.old/yoloDados/yolov3.weights
