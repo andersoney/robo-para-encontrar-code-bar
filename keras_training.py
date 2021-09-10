@@ -1,3 +1,6 @@
+# Fonte do codigo: https://keras.io/examples/vision/image_classification_from_scratch/
+import os;
+os.environ["TF_CPP_MIN_LOG_LEVEL"]="2"
 import matplotlib.pyplot as plt
 import tensorflow as tf
 from tensorflow import keras
@@ -131,16 +134,20 @@ except:
 
 
 
-img = keras.preprocessing.image.load_img(
-    "codebar_8.jpeg", target_size=image_size
-    # "qrcode_1.png", target_size=image_size
-)
-img_array = keras.preprocessing.image.img_to_array(img)
-img_array = tf.expand_dims(img_array, 0)  # Create batch axis
+def testForImage(filename):
+	img = keras.preprocessing.image.load_img(
+    # "imagens de test/codebar_254.jpeg", target_size=image_size
+		filename, target_size=image_size
+	)
+	img_array = keras.preprocessing.image.img_to_array(img)
+	img_array = tf.expand_dims(img_array, 0)  # Create batch axis
 
-predictions = model.predict(img_array)
-score = predictions[0]
-print(
-    "This image is %.2f percent code_bar and %.2f percent qrcode."
-    % (100 * (1 - score), 100 * score)
-)
+	predictions = model.predict(img_array)
+	score = predictions[0]
+	chanceCodeBar=100 * (1 - score);
+	chanceCodeBar=float(chanceCodeBar);
+	print(
+		f"This image is {chanceCodeBar:.2f} percent code_bar and { 100 - chanceCodeBar:.2f} percent qrcode."
+	)
+testForImage("imagens de test/qrcode_259.png");
+testForImage("imagens de test/codebar_254.jpeg");
