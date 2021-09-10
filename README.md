@@ -2,6 +2,14 @@
 Robô para encontrar codebar em imagens, podendo assim ser incorporado a um drone para localização de objetos em um estoque ou similar.
 
 ## Comando de execução
+
+### Comandos novos
+Para baixar as imagens o arquivo é downloadImage.py
+
+para treinar a ia ou rodar o script de validação use o keras_training.py
+
+
+### Comandos antigos.
 Para o do zero é ultilizado o comando:
 ```
 python dozero.py -i dump.jpg -w yoloDados\yolov3.weights -c yoloDados\yolov3.cfg -cl yoloDados\YoloNames.names
@@ -27,3 +35,5 @@ https://storage.googleapis.com/tfjs-examples/simple-object-detection/dist/index.
 para o arquivo main.py
 
 https://www.youtube.com/watch?v=PdErmEf-FCs
+
+
