@@ -1,6 +1,3 @@
-# Fonte do codigo original: https://towardsdatascience.com/yolo-object-detection-with-opencv-and-python-21e50ac599e9
-
-# import required packages
 import cv2
 import argparse
 import numpy as np

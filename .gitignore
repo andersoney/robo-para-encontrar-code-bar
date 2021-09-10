@@ -131,3 +131,7 @@ dmypy.json
 object-detection-*
 
 .old/yoloDados/yolov3.weights
+.h5_epochs/
+simple_images/
+"novas images"/
+class.weights/
