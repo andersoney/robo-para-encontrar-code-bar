@@ -111,7 +111,7 @@ keras.utils.plot_model(model, show_shapes=True)
 
 
 def training(model, train_ds, val_ds):
-    epochs = 50
+    epochs = 44
 
     callbacks = [
         keras.callbacks.ModelCheckpoint(".h5_epochs/save_at_{epoch}.h5"),
@@ -124,6 +124,8 @@ def training(model, train_ds, val_ds):
     model.fit(
         train_ds, epochs=epochs, callbacks=callbacks, validation_data=val_ds,
     )
+    # test_loss, test_acc = model.evaluate(val_ds,  [1,2], verbose=2)
+    # print(test_loss, test_acc);
 
 
 try:
@@ -132,7 +134,7 @@ except:
     training(model, train_ds, val_ds);
     model.save_weights('weights.h5');
 
-
+model.evaluate()
 
 def testForImage(filename):
 	img = keras.preprocessing.image.load_img(

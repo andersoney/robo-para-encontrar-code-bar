@@ -150,4 +150,4 @@ def testForImage(filename):
 		f"This image is {chanceCodeBar:.2f} percent any object and { 100 - chanceCodeBar:.2f} percent caixa de papelão."
 	)
 testForImage("outherImages/any_object_262.jpeg");
-testForImage("outherImages/caixa_de_papelao_291.jpeg");
+testForImage("outherImages/any_object_269.jpeg");
